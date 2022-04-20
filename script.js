@@ -13,7 +13,10 @@ const fetchCharacters = async () => {
   const values = Object.values(data.results);
   console.log(values);
   // TABLICA ZAMIENIANA W LISTE
-  const listedNames = values.map((curr) => `<li>${curr.name}</li>`);
+  const listedNames = values.map(
+    (curr) =>
+      `<li>${curr.name}<img src="${curr.image}" style="width:50px;" /></li>`
+  );
   // listedNames.toUppercase();
   displayNames.innerHTML = listedNames.sort();
 

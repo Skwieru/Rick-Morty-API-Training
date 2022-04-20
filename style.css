@@ -6,10 +6,17 @@ body {
 }
 
 li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
   list-style: none;
 }
 
 ul {
   list-style-type: none;
+}
+
+image {
+  padding-left: 50px;
 }
