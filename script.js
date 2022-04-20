@@ -4,8 +4,6 @@ const form = document.querySelector(".form");
 const input = document.querySelector(".input");
 
 // console.log(enteredValue.textContent);
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-
 const fetchCharacters = async () => {
   // fetchowanie danych
   const response = await fetch(API_Characters);
@@ -16,6 +14,7 @@ const fetchCharacters = async () => {
   console.log(values);
   // TABLICA ZAMIENIANA W LISTE
   const listedNames = values.map((curr) => `<li>${curr.name}</li>`);
+  // listedNames.toUppercase();
   displayNames.innerHTML = listedNames.sort();
 
   // Potwierdzenie formularza
@@ -26,9 +25,11 @@ const fetchCharacters = async () => {
     if (input.value === "") {
       alert("name can not be empty");
     }
-    // if (!filteredNames.includes(input.value)) {
-    //   alert("this kind of name doesn't exists on the list");
-    // }
+    if (filteredNames.length === 0) {
+      alert(
+        "There are no existing names on the list that contains this characters"
+      );
+    }
   });
 };
 
