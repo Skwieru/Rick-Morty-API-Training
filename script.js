@@ -15,7 +15,7 @@ const fetchCharacters = async () => {
   // TABLICA ZAMIENIANA W LISTE
   const listedNames = values.map(
     (curr) =>
-      `<li>${curr.name}<img src="${curr.image}" style="width:50px;" /></li>`
+      `<li>${curr.name} - <img src="${curr.image}" style="width:100px;" /></li>`
   );
   // listedNames.toUppercase();
   displayNames.innerHTML = listedNames.sort();
