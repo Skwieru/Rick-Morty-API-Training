@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul {
+  list-style-type: none;
+}
